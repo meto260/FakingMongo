@@ -58,14 +58,6 @@ namespace FakingMongo.Utils {
                     BsonSerializer.Serialize(writer, data);
                 }
             }
-
-            //File.WriteAllText(
-            //    Path.Combine("Backups", connName, $"{DateTime.Now.ToString("yyyyMMdd")}.json"),
-            //    data.ToJson(new JsonWriterSettings { 
-            //        OutputMode = JsonOutputMode.RelaxedExtendedJson
-            //    }, BsonSerializer.)
-            //);
-
             var recCollection = Program.LiteDB.GetCollection<Connections>("Connections");
             var rec = recCollection.FindOne(x => x.Name.Equals(connName));
             rec.LastRun = DateTime.Now;
