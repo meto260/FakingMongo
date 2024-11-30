@@ -8,15 +8,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Backups\test.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Backups\test.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="LiteDB" Version="5.0.19" />

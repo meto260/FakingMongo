@@ -7,6 +7,7 @@ namespace FakingMongo {
         ILiteCollection<Connections> conns = Program.LiteDB.GetCollection<Connections>("connections");
         public Form1() {
             InitializeComponent();
+            Directory.CreateDirectory("Backups");
         }
 
         private void Form1_Load(object sender, EventArgs e) {
